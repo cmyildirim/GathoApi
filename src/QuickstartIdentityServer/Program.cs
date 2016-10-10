@@ -4,9 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Builder;
 
-namespace GetToApi
+namespace QuickstartIdentityServer
 {
     public class Program
     {
@@ -14,7 +13,7 @@ namespace GetToApi
         {
             var host = new WebHostBuilder()
                 .UseKestrel()
-                .UseUrls("http://localhost:5001")
+                .UseUrls("http://localhost:5000")
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()

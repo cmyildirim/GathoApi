@@ -37,6 +37,14 @@ namespace GetToApi
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
+            app.UseIdentityServerAuthentication(new IdentityServerAuthenticationOptions
+            {
+                Authority = "http://localhost:5000",
+                ScopeName = "GettoApi",
+
+                RequireHttpsMetadata = false
+            });
+
             app.UseMvc();
         }
     }

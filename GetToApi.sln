@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "GetToApi", "src\GetToApi\GetToApi.xproj", "{37348E06-2A1D-4389-8CC6-4EE06FD34A2C}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "QuickstartIdentityServer", "src\QuickstartIdentityServer\QuickstartIdentityServer.xproj", "{48DC8739-74BB-4AE5-BD52-73B3E8C221D0}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "GetToClient", "src\GetToClient\GetToClient.xproj", "{EBCFDE26-CE56-4DCA-BBCE-61159E887BE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,11 +26,21 @@ Global
 		{37348E06-2A1D-4389-8CC6-4EE06FD34A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37348E06-2A1D-4389-8CC6-4EE06FD34A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37348E06-2A1D-4389-8CC6-4EE06FD34A2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48DC8739-74BB-4AE5-BD52-73B3E8C221D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48DC8739-74BB-4AE5-BD52-73B3E8C221D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48DC8739-74BB-4AE5-BD52-73B3E8C221D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48DC8739-74BB-4AE5-BD52-73B3E8C221D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBCFDE26-CE56-4DCA-BBCE-61159E887BE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBCFDE26-CE56-4DCA-BBCE-61159E887BE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBCFDE26-CE56-4DCA-BBCE-61159E887BE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBCFDE26-CE56-4DCA-BBCE-61159E887BE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{37348E06-2A1D-4389-8CC6-4EE06FD34A2C} = {A66A9385-30B6-4F52-A637-7DDB6E7A8032}
+		{48DC8739-74BB-4AE5-BD52-73B3E8C221D0} = {A66A9385-30B6-4F52-A637-7DDB6E7A8032}
+		{EBCFDE26-CE56-4DCA-BBCE-61159E887BE7} = {A66A9385-30B6-4F52-A637-7DDB6E7A8032}
 	EndGlobalSection
 EndGlobal
