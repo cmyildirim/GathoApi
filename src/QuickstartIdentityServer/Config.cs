@@ -14,7 +14,9 @@ namespace QuickstartIdentityServer
                 {
                     Name = "GettoApi",
                     Description = "Getto API"
-                }
+                },
+                StandardScopes.OpenId,
+                StandardScopes.Profile
             };
         }
 
@@ -50,7 +52,26 @@ namespace QuickstartIdentityServer
                     {
                         new Secret("secret".Sha256())
                     },
-                    AllowedScopes = { "GettoApi" }
+                    AllowedScopes = {"GettoApi"}
+                },
+                // OpenID Connect implicit flow client (MVC)
+                new Client
+                {
+                    ClientId = "mvc",
+                    ClientName = "MVC Client",
+                    AllowedGrantTypes = GrantTypes.Implicit,
+
+                    // where to redirect to after login
+                    RedirectUris = {"http://localhost:5002/signin-oidc"},
+
+                    // where to redirect to after logout
+                    PostLogoutRedirectUris = {"http://localhost:5002"},
+                    AllowedScopes = new List<string>
+                    {
+                        StandardScopes.OpenId.Name,
+                        StandardScopes.Profile.Name
+                    },
+                    RequireConsent = false
                 }
             };
         }

@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Net.Http;
 using System.Threading.Tasks;
 using IdentityModel.Client;
-using Microsoft.Extensions.DependencyModel.Resolution;
 using Newtonsoft.Json.Linq;
 
 namespace GetToClient
