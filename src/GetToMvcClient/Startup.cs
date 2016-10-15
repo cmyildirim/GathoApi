@@ -50,6 +50,19 @@ namespace GetToMvcClient
                 AuthenticationScheme = "Cookies"
             });
 
+            //Replaced for hybrid flow
+            //app.UseOpenIdConnectAuthentication(new OpenIdConnectOptions
+            //{
+            //    AuthenticationScheme = "oidc",
+            //    SignInScheme = "Cookies",
+
+            //    Authority = "http://localhost:5000",
+            //    RequireHttpsMetadata = false,
+
+            //    ClientId = "mvc",
+            //    SaveTokens = true
+            //});
+
             app.UseOpenIdConnectAuthentication(new OpenIdConnectOptions
             {
                 AuthenticationScheme = "oidc",
@@ -58,7 +71,13 @@ namespace GetToMvcClient
                 Authority = "http://localhost:5000",
                 RequireHttpsMetadata = false,
 
-                ClientId = "mvc",
+                ClientId = "mvc2",
+                ClientSecret = "secret2",
+
+                ResponseType = "code id_token",//Basically means us hybrid flow
+                Scope = { "GettoApi", "offline_access" },
+
+                GetClaimsFromUserInfoEndpoint = true,
                 SaveTokens = true
             });
 
