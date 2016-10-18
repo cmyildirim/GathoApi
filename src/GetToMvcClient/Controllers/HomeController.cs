@@ -15,7 +15,6 @@ namespace GetToMvcClient.Controllers
             return View();
         }
 
-        [Authorize]
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
@@ -44,6 +43,7 @@ namespace GetToMvcClient.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult Secure()
         {
             ViewData["Message"] = "Secure Page.";

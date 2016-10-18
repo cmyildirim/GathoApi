@@ -57,6 +57,25 @@ namespace QuickstartIdentityServer
                 ClientSecret = "3gcoTrEDPPJ0ukn_aYYT6PWo"
             });
 
+            app.UseFacebookAuthentication(new FacebookOptions()
+            {
+                AuthenticationScheme = "Facebook",
+                DisplayName = "Facebook",
+                SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme,
+
+                AppId = "1798158533789084",
+                AppSecret = "61c4c066a8a36f2f6b0f859a6e4cb157"
+            });
+
+            app.UseTwitterAuthentication(new TwitterOptions()
+            {
+                AuthenticationScheme = "Twitter",
+                DisplayName = "Twitter",
+                SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme,
+                ConsumerSecret = "9GRkdqAqEnWq1pZgOd6nJiSNxhGvKAyVJcTDeXaF9tyhAc1rcE",
+                ConsumerKey = "QeiHuldKqhlDd6tH0NjWCrZ4P"
+            });
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
